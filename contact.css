@@ -20,7 +20,7 @@ body#contactBody {
   background-image: url(natureImage2.jpg); /* Replace with actual file name */
 }
 
-/* Navigation */
+/* Navigation bar */
 #navbar {
   position: fixed;
   top: 0;
@@ -74,16 +74,19 @@ body#contactBody {
 }
 
 #contactElement {
+  font-family: Garamond, serif;
   font-size: 2rem;
 }
 
 #phoneNumber,
 #eMail {
+  font-family: Garamond: serif;
   font-size: 32px;
   font-weight: 200;
 }
 
 #eMail {
+  font-family: Garamond, serif;
   margin-top: 25px;
 }
 
