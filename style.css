@@ -1,7 +1,13 @@
-body#homeBody,
-body#contactBody {
-  padding-top: 50px;
+:root {
+  --nav-height: 50px;
+}
+
+body {
   margin: 0;
+  padding-top: var(--nav-height);
+}
+
+#homeBody {
   background-image: url(natureImage.jpg);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
@@ -11,6 +17,10 @@ body#contactBody {
 
 #contactBody {
   background-image: url(natureImage2.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
 }
 
 * {
@@ -25,7 +35,7 @@ body#contactBody {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: var(--nav-height);
   background: black;
 }
 
