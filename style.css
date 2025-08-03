@@ -1,26 +1,23 @@
-:root {
-  --nav-height: 50px;
+#homeBody {
+  background-image: url(natureImage.jpg);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
 }
 
-/* 1) Lock root scrolling only on Home page */
-body#homeBody {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+#contactBody {
+  background-image: url(natureImage2.jpg);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
 }
 
-/* 2) Your scrollable “window” under the navbar (still applies on both pages) */
-#scroll-container {
-  height: calc(100% - var(--nav-height));
-  margin-top: var(--nav-height);
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: touch;
+* {
+  text-decoration: none;
 }
 
-/* 3) Navbar stays fixed at top */
 #navbar {
   font-family: Garamond, serif;
   padding-left: 15px;
@@ -29,14 +26,13 @@ body#homeBody {
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--nav-height);
-  z-index: 1000;
+  height: 50px;
   background: black;
 }
 
 #navdiv {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* fixes centering */
   align-items: center;
   height: 100%;
 }
@@ -54,52 +50,40 @@ body#homeBody {
   font-weight: bold;
 }
 
-/* Global reset */
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-/* Section wrappers – keep backgrounds, add offset for anchors */
-#homeBody,
-#contactBody {
-  scroll-margin-top: var(--nav-height);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
-  margin: 0;       /* reset old margin-top */
-}
-
-#homeBody {
-  background-image: url(natureImage.jpg);
-}
-
-#contactBody {
-  background-image: url(natureImage2.jpg);
-}
-
-/* Home content blocks */
 #nameElement {
   font-family: Garamond, serif;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px auto;
-  max-width: 800px;
-  padding: 0 25px;
+  margin: 150px 0px 150px 0px
 }
 
-#introduction,
-#extrainf1,
-#extrainf2,
+#introduction {
+  font-family: courier, monospace;
+  font-weight: bold;
+  color: white;
+  margin: 0px 700px 0px 25px
+}
+
+#extrainf1 {
+  font-family: courier, monospace;
+  font-weight: bold;
+  color: white;
+  margin: 75px 25px 0px 700px
+}
+
+#extrainf2 {
+  font-family: courier, monospace;
+  font-weight: bold;
+  color: white;
+  margin: 75px 700px 0px 25px
+}
+
 #extrainf3 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  max-width: 800px;
-  margin: 1rem auto;
-  padding: 0 25px;
+  margin: 75px 25px 0px 700px
 }
 
 #finalLine {
@@ -107,12 +91,9 @@ body#homeBody {
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 125px auto 50px;
-  max-width: 600px;
-  padding: 0 25px;
+  margin: 125px 250px 50px 250px
 }
 
-/* Fade-in / Fade-out animations */
 .fadeIn {
   margin: 1rem 0;
   transform: translateY(20px);
@@ -121,31 +102,33 @@ body#homeBody {
 }
 
 .fadeIn--visible {
-  opacity: 1;
-  transform: translateY(0);
+opacity: 1;  
+transform: translateY(0);
 }
 
-.fadeIn--hidden {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-/* Contact content blocks */
-#contactElement,
-#phoneNumber,
-#eMail {
+#contactElement {
   font-family: Garamond, serif;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px auto 100px;
-  max-width: 600px;
-  padding: 0 25px;
+  margin: 150px 0px 100px 0px
 }
 
-#phoneNumber,
-#eMail {
+#phoneNumber {
+  font-family: Garamond, serif;
   font-size: 32px;
-  margin: 0 0 25px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+#eMail {
+  font-family: Garamond, serif;
+  font-size: 32px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin: 25px 0px 0px 0px;
 }
