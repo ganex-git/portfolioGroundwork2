@@ -6,7 +6,6 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Garamond, serif;
 }
 
 body#homeBody {
@@ -27,9 +26,8 @@ body#contactBody {
   background-repeat: no-repeat;
 }
 
-* {
-  box-sizing: inherit;
-  text-decoration: none;
+#pageContent {
+  padding-top: var(--nav-height);
 }
 
 #navbar {
@@ -40,15 +38,16 @@ body#contactBody {
   height: var(--nav-height);
   background: black;
   z-index: 9999;
-  padding: 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
 }
 
 #navdiv a {
   font-size: 20px;
   color: white;
+  text-decoration: none;
 }
 
 .navbarLinks {
@@ -58,52 +57,50 @@ body#contactBody {
   font-weight: bold;
 }
 
-#pageContent {
-  padding-top: var(--nav-height);
+* {
+  box-sizing: inherit;
+  text-decoration: none;
 }
 
-/* Content sections */
-#nameElement {
-  font-weight: 200;
+/* Content layout */
+#nameElement,
+#introduction,
+#extrainf1,
+#extrainf2,
+#extrainf3,
+#finalLine,
+#contactElement,
+#phoneNumber,
+#eMail {
   color: white;
+  font-family: courier, monospace;
+  font-weight: bold;
+  padding: 25px;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  margin: 150px 0;
 }
 
-#introduction {
-  font-family: courier, monospace;
-  font-weight: bold;
-  color: white;
-  margin: 0 700px 0 25px;
-}
-
-#extrainf1 {
-  font-family: courier, monospace;
-  font-weight: bold;
-  color: white;
-  margin: 75px 25px 0 700px;
-}
-
-#extrainf2 {
-  font-family: courier, monospace;
-  font-weight: bold;
-  color: white;
-  margin: 75px 700px 0 25px;
-}
-
-#extrainf3 {
-  font-family: courier, monospace;
-  font-weight: bold;
-  color: white;
-  margin: 75px 25px 0 700px;
+#nameElement {
+  font-family: Garamond, serif;
+  font-weight: 200;
+  font-size: 2rem;
+  margin-top: 100px;
 }
 
 #finalLine {
-  font-family: courier, monospace;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin: 125px 250px 50px 250px;
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+
+#phoneNumber,
+#eMail {
+  font-size: 32px;
+  font-weight: 200;
+}
+
+#eMail {
+  margin-top: 25px;
 }
 
 /* Fade animation */
@@ -117,24 +114,4 @@ body#contactBody {
 .fadeIn--visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Contact details */
-#contactElement {
-  font-weight: 200;
-  color: white;
-  text-align: center;
-  margin: 150px 0 100px;
-}
-
-#phoneNumber,
-#eMail {
-  font-size: 32px;
-  font-weight: 200;
-  color: white;
-  text-align: center;
-}
-
-#eMail {
-  margin-top: 25px;
 }
