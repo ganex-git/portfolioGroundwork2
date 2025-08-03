@@ -2,37 +2,36 @@
   --nav-height: 50px;
 }
 
-body,
-#homeBody,
-#contactBody {
+html, body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, serif;
   padding-top: var(--nav-height);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #homeBody {
   background-image: url(natureImage.jpg);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
 }
 
 #contactBody {
   background-image: url(natureImage2.jpg);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
 }
 
 * {
   text-decoration: none;
+  box-sizing: inherit;
 }
 
 #navbar {
-  font-family: Garamond, serif;
-  padding-left: 15px;
-  padding-right: 15px;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +39,8 @@ body,
   height: var(--nav-height);
   background: black;
   z-index: 9999;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #navdiv {
@@ -52,7 +53,6 @@ body,
 #navdiv a {
   font-size: 20px;
   color: white;
-  text-decoration: none;
 }
 
 .navbarLinks {
@@ -63,39 +63,38 @@ body,
 }
 
 #nameElement {
-  font-family: Garamond, serif;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px 0px 150px 0px;
+  margin: 150px 0;
 }
 
 #introduction {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 0px 700px 0px 25px;
+  margin: 0 700px 0 25px;
 }
 
 #extrainf1 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 25px 0px 700px;
+  margin: 75px 25px 0 700px;
 }
 
 #extrainf2 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 700px 0px 25px;
+  margin: 75px 700px 0 25px;
 }
 
 #extrainf3 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 25px 0px 700px;
+  margin: 75px 25px 0 700px;
 }
 
 #finalLine {
@@ -119,27 +118,24 @@ body,
 }
 
 #contactElement {
-  font-family: Garamond, serif;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px 0px 100px 0px;
+  margin: 150px 0 100px;
 }
 
 #phoneNumber {
-  font-family: Garamond, serif;
   font-size: 32px;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
 }
 
 #eMail {
-  font-family: Garamond, serif;
   font-size: 32px;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 25px 0px 0px 0px;
+  margin-top: 25px;
 }
