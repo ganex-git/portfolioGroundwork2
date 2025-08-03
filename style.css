@@ -1,6 +1,9 @@
-#homeBody {
+body#homeBody,
+body#contactBody {
+  padding-top: 50px;
+  margin: 0;
   background-image: url(natureImage.jpg);
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
@@ -8,10 +11,6 @@
 
 #contactBody {
   background-image: url(natureImage2.jpg);
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
 }
 
 * {
@@ -32,7 +31,7 @@
 
 #navdiv {
   display: flex;
-  justify-content: center;  /* fixes centering */
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -55,35 +54,35 @@
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px 0px 150px 0px
+  margin: 150px 0px 150px 0px;
 }
 
 #introduction {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 0px 700px 0px 25px
+  margin: 0px 700px 0px 25px;
 }
 
 #extrainf1 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 25px 0px 700px
+  margin: 75px 25px 0px 700px;
 }
 
 #extrainf2 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 700px 0px 25px
+  margin: 75px 700px 0px 25px;
 }
 
 #extrainf3 {
   font-family: courier, monospace;
   font-weight: bold;
   color: white;
-  margin: 75px 25px 0px 700px
+  margin: 75px 25px 0px 700px;
 }
 
 #finalLine {
@@ -91,7 +90,7 @@
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 125px 250px 50px 250px
+  margin: 125px 250px 50px 250px;
 }
 
 .fadeIn {
@@ -102,17 +101,16 @@
 }
 
 .fadeIn--visible {
-opacity: 1;  
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
-
 
 #contactElement {
   font-family: Garamond, serif;
   font-weight: 200;
   color: white;
   text-align: center;
-  margin: 150px 0px 100px 0px
+  margin: 150px 0px 100px 0px;
 }
 
 #phoneNumber {
