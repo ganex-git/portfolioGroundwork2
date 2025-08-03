@@ -2,21 +2,25 @@
   --nav-height: 50px;
 }
 
+/* Reset */
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styling */
 body {
   font-family: Garamond, serif;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
 }
 
+/* Page-specific backgrounds */
 body#homeBody {
   background-image: url(natureImage.jpg);
 }
@@ -25,6 +29,7 @@ body#contactBody {
   background-image: url(natureImage2.jpg);
 }
 
+/* Navigation bar */
 #navbar {
   position: fixed;
   top: 0;
@@ -50,13 +55,22 @@ body#contactBody {
   font-size: 20px;
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+#navdiv a:hover {
+  color: #90ee90;
+}
+
+/* Content spacing */
 #pageContent {
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 50px;
+  text-align: center;
   max-width: 100%;
 }
 
+/* Text animation */
 .fadeIn {
   margin: 1rem 0;
   transform: translateY(20px);
@@ -69,6 +83,7 @@ body#contactBody {
   transform: translateY(0);
 }
 
+/* Text styling */
 #nameElement,
 #introduction,
 #extrainf1,
@@ -78,13 +93,13 @@ body#contactBody {
 #contactElement,
 #phoneNumber,
 #eMail {
-  color: white;
   font-family: courier, monospace;
   font-weight: bold;
   padding: 25px;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 #nameElement {
@@ -108,8 +123,16 @@ body#contactBody {
   margin-top: 25px;
 }
 
-#pageContent {
-  padding-top: var(--nav-height);
-  padding-bottom: 50px;
-  text-align: center;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #phoneNumber,
+  #eMail {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  #contactElement {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
 }
