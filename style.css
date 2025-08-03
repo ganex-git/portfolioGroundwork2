@@ -107,3 +107,9 @@ body#contactBody {
 #eMail {
   margin-top: 25px;
 }
+
+#pageContent {
+  padding-top: var(--nav-height);
+  padding-bottom: 50px;
+  text-align: center;
+}
