@@ -6,11 +6,11 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Garamond, serif;
 }
 
-body {
-  font-family: Garamond, serif;
-  padding-top: var(--nav-height);
+body#homeBody {
+  background-image: url(natureImage.jpg);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
   background-size: cover;
@@ -18,17 +18,18 @@ body {
   background-repeat: no-repeat;
 }
 
-#homeBody {
-  background-image: url(natureImage.jpg);
-}
-
-#contactBody {
+body#contactBody {
   background-image: url(natureImage2.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 * {
-  text-decoration: none;
   box-sizing: inherit;
+  text-decoration: none;
 }
 
 #navbar {
@@ -39,15 +40,10 @@ body {
   height: var(--nav-height);
   background: black;
   z-index: 9999;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#navdiv {
+  padding: 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 #navdiv a {
@@ -62,6 +58,11 @@ body {
   font-weight: bold;
 }
 
+#pageContent {
+  padding-top: var(--nav-height);
+}
+
+/* Content sections */
 #nameElement {
   font-weight: 200;
   color: white;
@@ -105,6 +106,7 @@ body {
   margin: 125px 250px 50px 250px;
 }
 
+/* Fade animation */
 .fadeIn {
   margin: 1rem 0;
   transform: translateY(20px);
@@ -117,6 +119,7 @@ body {
   transform: translateY(0);
 }
 
+/* Contact details */
 #contactElement {
   font-weight: 200;
   color: white;
@@ -124,18 +127,14 @@ body {
   margin: 150px 0 100px;
 }
 
-#phoneNumber {
-  font-size: 32px;
-  font-weight: 200;
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-
+#phoneNumber,
 #eMail {
   font-size: 32px;
   font-weight: 200;
   color: white;
   text-align: center;
+}
+
+#eMail {
   margin-top: 25px;
 }
