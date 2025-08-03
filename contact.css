@@ -1,0 +1,102 @@
+:root {
+  --nav-height: 50px;
+}
+
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Garamond, serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+body#contactBody {
+  background-image: url(natureImage2.jpg); /* Replace with actual file name */
+}
+
+/* Navigation */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbarLinks {
+  list-style: none;
+  display: inline-block;
+  margin: 0 40px;
+  font-weight: bold;
+}
+
+#navdiv a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#navdiv a:hover {
+  color: #90ee90;
+}
+
+/* Content Layout */
+#pageContent {
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 50px;
+  text-align: center;
+  max-width: 100%;
+}
+
+#contactElement,
+#phoneNumber,
+#eMail {
+  font-family: courier, monospace;
+  font-weight: bold;
+  padding: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+#contactElement {
+  font-size: 2rem;
+}
+
+#phoneNumber,
+#eMail {
+  font-size: 32px;
+  font-weight: 200;
+}
+
+#eMail {
+  margin-top: 25px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  #contactElement {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  #phoneNumber,
+  #eMail {
+    font-size: 24px;
+    padding: 15px;
+  }
+}
