@@ -93,10 +93,7 @@ body#contactBody {
 #extrainf1,
 #extrainf2,
 #extrainf3,
-#finalLine,
-#contactElement,
-#phoneNumber,
-#eMail {
+#finalLine {
   font-family: courier, monospace;
   font-weight: bold;
   padding: 25px;
@@ -115,28 +112,4 @@ body#contactBody {
 #finalLine {
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-#phoneNumber,
-#eMail {
-  font-size: 32px;
-  font-weight: 200;
-}
-
-#eMail {
-  margin-top: 25px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  #phoneNumber,
-  #eMail {
-    font-size: 24px;
-    padding: 15px;
-  }
-
-  #contactElement {
-    font-size: 1.5rem;
-    padding: 20px;
-  }
 }
