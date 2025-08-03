@@ -2,25 +2,27 @@
   --nav-height: 50px;
 }
 
-/* 1) Lock root scrolling only on Home page */
 body#homeBody {
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-/* 2) Your scrollable “window” under the navbar (still applies on both pages) */
+/* Optional: smooth scroll for anchor jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollable container under navbar */
 #scroll-container {
-  height: calc(100% - var(--nav-height));
   margin-top: var(--nav-height);
+  padding-bottom: 100px;
   overflow-y: auto;
   overflow-x: hidden;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
 
-/* 3) Navbar stays fixed at top */
+/* Fixed navbar */
 #navbar {
   font-family: Garamond, serif;
   padding-left: 15px;
@@ -54,13 +56,12 @@ body#homeBody {
   font-weight: bold;
 }
 
-/* Global reset */
 * {
   box-sizing: border-box;
   text-decoration: none;
 }
 
-/* Section wrappers – keep backgrounds, add offset for anchors */
+/* Page backgrounds */
 #homeBody,
 #contactBody {
   scroll-margin-top: var(--nav-height);
@@ -68,7 +69,7 @@ body#homeBody {
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
-  margin: 0;       /* reset old margin-top */
+  margin: 0;
 }
 
 #homeBody {
@@ -79,7 +80,7 @@ body#homeBody {
   background-image: url(natureImage2.jpg);
 }
 
-/* Home content blocks */
+/* Content blocks */
 #nameElement {
   font-family: Garamond, serif;
   font-weight: 200;
@@ -112,7 +113,7 @@ body#homeBody {
   padding: 0 25px;
 }
 
-/* Fade-in / Fade-out animations */
+/* Animations */
 .fadeIn {
   margin: 1rem 0;
   transform: translateY(20px);
@@ -131,7 +132,7 @@ body#homeBody {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Contact content blocks */
+/* Contact section */
 #contactElement,
 #phoneNumber,
 #eMail {
