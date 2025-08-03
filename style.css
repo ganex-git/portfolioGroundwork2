@@ -8,26 +8,21 @@ html, body {
   box-sizing: border-box;
 }
 
-body#homeBody {
-  background-image: url(natureImage.jpg);
+body {
+  font-family: Garamond, serif;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+body#homeBody {
+  background-image: url(natureImage.jpg);
 }
 
 body#contactBody {
   background-image: url(natureImage2.jpg);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#pageContent {
-  padding-top: var(--nav-height);
 }
 
 #navbar {
@@ -44,12 +39,6 @@ body#contactBody {
   padding: 0 15px;
 }
 
-#navdiv a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
 .navbarLinks {
   list-style: none;
   display: inline-block;
@@ -57,12 +46,29 @@ body#contactBody {
   font-weight: bold;
 }
 
-* {
-  box-sizing: inherit;
+#navdiv a {
+  font-size: 20px;
+  color: white;
   text-decoration: none;
 }
 
-/* Content layout */
+#pageContent {
+  padding-top: var(--nav-height);
+  max-width: 100%;
+}
+
+.fadeIn {
+  margin: 1rem 0;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadeIn--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #nameElement,
 #introduction,
 #extrainf1,
@@ -85,11 +91,10 @@ body#contactBody {
   font-family: Garamond, serif;
   font-weight: 200;
   font-size: 2rem;
-  margin-top: 100px;
 }
 
 #finalLine {
-  margin-top: 125px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -101,17 +106,4 @@ body#contactBody {
 
 #eMail {
   margin-top: 25px;
-}
-
-/* Fade animation */
-.fadeIn {
-  margin: 1rem 0;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fadeIn--visible {
-  opacity: 1;
-  transform: translateY(0);
 }
