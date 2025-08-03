@@ -2,7 +2,9 @@
   --nav-height: 50px;
 }
 
-body {
+body,
+#homeBody,
+#contactBody {
   margin: 0;
   padding-top: var(--nav-height);
 }
