@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aryan Peddi Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Aryan Peddi Portfolio</title> <!-- Good semantic title -->
+  <link rel="stylesheet" href="./style.css"> <!-- Correct path if style.css is in same folder -->
 </head>
-<body id="homeBody">
+<body id="homeBody"> <!-- Correct ID used, make sure CSS targets #homeBody -->
 
+  <!-- ✅ Navbar sits in header -->
   <header id="navbar">
     <nav id="navdiv">
-      <ul>
+      <ul> <!-- ⚠️ Previously misspelled as <u1> -->
         <li class="navbarLinks"><a href="index.html">Home</a></li>
         <li class="navbarLinks"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- ✅ Content area safely padded below navbar -->
   <main id="pageContent">
     <h1 id="nameElement" class="fadeIn">Hi, I'm Aryan Peddi!</h1>
 
@@ -40,6 +42,6 @@
     </p>
   </main>
 
-  <script src="./script.js"></script>
+  <script src="./script.js"></script> <!-- Make sure this file exists -->
 </body>
 </html>
